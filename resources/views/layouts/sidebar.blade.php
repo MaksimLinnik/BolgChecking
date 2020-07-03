@@ -31,16 +31,8 @@
       <!-- Sidebar Menu -->
       <ul class="sidebar-menu">
         <!-- Optionally, you can add icons to the links -->
-        <li
-          @if (isset($blogs)) 
-            class="active"
-          @endif
-        ><a href="{{ route('admin.index') }}"><i class="fa fa-link"></i> <span>Blog management</span></a></li>
-        <li
-          @if (isset($users)) 
-            class="active"
-          @endif
-        ><a href="{{ route('user-management.index') }}"><i class="fa fa-link"></i> <span>User management</span></a></li>
+        <li {{isset($blogs) ? 'class=active' : ''}}><a href="{{ route('admin.index') }}"><i class="fa fa-link"></i> <span>Blog management</span></a></li>
+        <li {{isset($users) ? 'class=active' : ''}}><a href="{{ route('user-management.index') }}"><i class="fa fa-link"></i> <span>User management</span></a></li>
       </ul>
       <!-- /.sidebar-menu -->
     </section>

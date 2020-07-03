@@ -125,7 +125,7 @@
                                     @endif
                                 </div>
                                 <label class="mr-4">
-                                    <input class="with-gap" name="gender" type="radio" value="m" required/>
+                                    <input class="with-gap" name="gender" type="radio" value="m" checked required/>
                                     <span>Male</span>
                                 </label>
                                 <label>
