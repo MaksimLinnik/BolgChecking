@@ -5,5 +5,9 @@
       Anything you want
     </div>
     <!-- Default to the left -->
-    <strong>Copyright &copy; 2017 <a href="#">Company</a>.</strong> All rights reserved.
+    <p class="text-center grey-text text-lighten-2 tm-footer-text-small">
+        Copyright &copy; 2020 Institute University
+        - <a rel="nofollow" href="#">Southern Punjab</a> by 
+        <a rel="nofollow" href="#" class="tm-footer-link">Collage</a>
+    </p>
   </footer>

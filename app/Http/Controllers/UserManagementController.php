@@ -44,7 +44,7 @@ class UserManagementController extends Controller
      */
     public function create()
     {
-        return view('users-mgmt/create');
+        return view('users-mgmt/create', ['users' => []]);
     }
 
     /**
@@ -56,7 +56,8 @@ class UserManagementController extends Controller
     public function store(Request $request)
     {
         $this->validateInput($request);
-         User::create([
+
+        User::create([
             'username' => $request['username'],
             'email' => $request['email'],
             'password' => bcrypt($request['password']),
@@ -88,11 +89,11 @@ class UserManagementController extends Controller
     {
         $user = User::find($id);
         // Redirect to user list if updating user wasn't existed
-        if ($user == null || count($user) == 0) {
+        if ($user == null) {
             return redirect()->intended('/user-management');
         }
 
-        return view('users-mgmt/edit', ['user' => $user]);
+        return view('users-mgmt/edit', ['user' => $user, 'users' => []]);
     }
 
     /**

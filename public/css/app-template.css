@@ -18,3 +18,9 @@
       font-size: 14px;
     }
  }
+
+.form-middle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

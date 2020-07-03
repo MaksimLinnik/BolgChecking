@@ -13,7 +13,7 @@
 
 Route::get('/', function () {
     return view('dashboard');
-})->middleware('auth');
+});
 
 Auth::routes();
 
@@ -21,3 +21,6 @@ Route::get('/dashboard', 'DashboardController@index');
 
 Route::post('user-management/search', 'UserManagementController@search')->name('user-management.search');
 Route::resource('user-management', 'UserManagementController');
+
+Route::post('admin/search', 'BlogManagementController@search')->name('blog-management.search');
+Route::resource('admin', 'BlogManagementController');
